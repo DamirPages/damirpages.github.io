@@ -1,0 +1,62 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "HLS" %}
+{% set isAuthorized = false %}
+
+{% block content %}
+
+  <div class="landing-header">
+    <div class="wrapper">
+      <div class="landing-header-container">
+        {% block breadcrumbs %}
+          {% include '../src/templates/partials/breadcrumbs.twig' %}
+        {% endblock %}
+        {% block tabs %}
+          {% include '../src/templates/partials/landing/tabs.twig' %}
+        {% endblock %}
+      </div>
+      <div class="landing-header-button">
+        <div class="button">
+          Купить курс
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% block banner %}
+		{% include '../src/templates/partials/landing/banner.twig' %}
+	{% endblock %}
+
+	{% block includes %}
+		{% include '../src/templates/partials/landing/include.twig' %}
+	{% endblock %}
+
+	{% block slider %}
+		{% include '../src/templates/partials/landing/slider.twig' %}
+	{% endblock %}
+
+	{% block profit %}
+		{% include '../src/templates/partials/landing/profit.twig' %}
+	{% endblock %}
+
+	{% block desc %}
+		{% include '../src/templates/partials/landing/desc.twig' %}
+	{% endblock %}
+
+	{% block program %}
+		{% include '../src/templates/partials/landing/program.twig' %}
+	{% endblock %}
+
+	{% block info %}
+		{% include '../src/templates/partials/landing/info.twig' %}
+	{% endblock %}
+
+	{% block includes %}
+		{% include '../src/templates/partials/landing/include.twig' %}
+	{% endblock %}
+
+	{% block reviews %}
+		{% include '../src/templates/partials/landing/reviews.twig' %}
+	{% endblock %}
+
+{% endblock %}

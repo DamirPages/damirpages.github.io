@@ -1,0 +1,18 @@
+
+.new-tabs {
+  display: flex;
+}
+
+.new-tab {
+  margin-right: 32px;
+  padding-bottom: 16px;
+  padding-left: 4px;
+  padding-right: 4px;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+}
+
+.new-tab.active {
+  border-bottom: 2px solid #FAB706;
+  pointer-events: none;
+}
