@@ -19,7 +19,7 @@ body {
 	position: relative;
 	-webkit-overflow-scrolling: touch;
 	background: #f9f9f9;
-  font-family: sans-serif;
+  font-family: "Noto Sans", "Roboto", sans-serif;
 
 	& > * {
 		flex-shrink: 0;
@@ -95,6 +95,8 @@ h6 {
   transition: 0.3s;
   cursor: pointer;
   text-align: center;
+  border: none;
+  color: #000;
 
   &:hover{
     background: #F9DD91;
@@ -121,6 +123,52 @@ h6 {
   }
   &:active{
     background: #000;
+    color: #fff;
+  }
+}
+
+.button-black{
+  padding: 10px 20px;
+  background: #000;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+  border: 1.5px solid #000;
+  color: #fff;
+
+  &:hover{
+    background: #666666;
+    border-color: #666666;
+  }
+  &:active{
+    background: #fff;
+    border-color: #000;
+    color: #000;
+  }
+}
+.button-border{
+  padding: 10px 20px;
+  background: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: 0.3s;
+  cursor: pointer;
+  text-align: center;
+  border: 1.5px solid #000;
+  color: #000;
+
+  &:hover{
+    background: #fff5da;
+  }
+  &:active{
+    background: #000;
+    border-color: #000;
     color: #fff;
   }
 }
@@ -301,6 +349,7 @@ $arrow_color: $gray !default;
     background-color: #fff;
     border-radius: $input_border_radius;
     box-shadow: 0 0 0 1px rgba($gray_dark, .11);
+    width: 100%;
 
     pointer-events: none;
     position: absolute;
@@ -318,6 +367,7 @@ $arrow_color: $gray !default;
     box-sizing: border-box;
     overflow: hidden;
     padding: 0;
+    margin: 0;
     max-height: 210px;
     overflow-y: auto;
 
@@ -438,6 +488,11 @@ $arrow_color: $gray !default;
   flex-direction: column;
 }
 
+.category-filter-button svg {
+  margin-right: 8px;
+  fill: white;
+}
+
 .category-filter-button {
   height: 41px;
   border-radius: 8px;
@@ -448,10 +503,20 @@ $arrow_color: $gray !default;
   color: #fff;
   font-size: 14px;
   margin-right: 20px;
-}
-
-.category-filter-button svg {
-  margin-right: 8px;
+  transition: 0.3s;
+  cursor: pointer;
+  border: 1px solid #000;
+  &:hover{
+    background: #666666;
+    border-color: #666;
+  }
+  &:active{
+    background: #fff;
+    color: #000;
+    svg{
+      fill: #000;
+    }
+  }
 }
 
 .category-result-text {
@@ -488,6 +553,7 @@ $arrow_color: $gray !default;
 
 .page-pagination-item svg {
   fill: #212A34;
+  transition: 0.3s;
 }
 
 .page-pagination-item {
@@ -503,6 +569,7 @@ $arrow_color: $gray !default;
   border-radius: 8px;
   cursor: pointer;
   transition: 0.3s;
+  background: #fff;
 }
 
 .page-pagination-item:hover {
@@ -569,4 +636,107 @@ $arrow_color: $gray !default;
   text-decoration: underline;
   font-size: 14px;
   color: #000;
+}
+
+.checkbox{
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  .checkbox__input, input{
+    width: 1px;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+    &:checked + .checkbox__icon{
+      background: #fab706;
+      &::before{
+        left: 22px;
+      }
+    }
+  }
+  .checkbox__icon{
+    width: 44px;
+    height: 24px;
+    border-radius: 12px;
+    background: #c4c4c4;
+    position: relative;
+    padding: 2px;
+    display: flex;
+    transition: 0.3s;
+    flex-shrink: 0;
+    margin-right: 12px;
+    &::before{
+      width: 20px;
+      height: 20px;
+      content: '';
+      background: #fff;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      transition: 0.3s;
+    }
+  }
+  .checkbox__text{
+    color: #666666;
+    font-size: 12px;
+    line-height: 120%;
+    a{
+      color: #FAB706;
+      display: inline-block;
+      border-bottom: 1px solid #FAB706;
+    }
+  }
+}
+
+.allpage{
+  padding: 32px 0;
+  .wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .title{
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 900;
+    margin-bottom: 15px;
+  }
+  &-links{
+    display: flex;
+    flex-direction: column;
+    a{
+      margin-bottom: 10px;
+    } 
+  }
+}
+
+.popular-tabs{
+  padding-top: 30px;
+}
+
+.desc-video{
+  margin-top: 30px;
+  &-title{
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 13px;
+    font-weight: 600;
+  }
+  .reviews__video{
+    width: 208px;
+    height: 139px;
+    margin-right: 20px;
+  }
+  .reviews__video::before{
+    width: 51px;
+    height: 51px;
+    left: calc(50% - 25.5px);
+    top: calc(50% - 25.5px);
+    background-repeat: no-repeat;
+  }
 }
