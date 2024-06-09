@@ -3,6 +3,9 @@ import 'swiper/css';
 import 'nice-select2/src/scss/nice-select2.scss';
 
 import { Fancybox } from '@fancyapps/ui';
+
+import NiceSelect from 'nice-select2';
+
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 Fancybox.bind('[data-fancybox]');
@@ -10,7 +13,7 @@ Fancybox.bind('[data-fancybox]');
 document.addEventListener('DOMContentLoaded', () => {
 	const selects = document.querySelectorAll('.selectize');
 	selects.forEach(select => {
-		NiceSelect.bind(select);
+		new NiceSelect(select);
 	});
 });
 
