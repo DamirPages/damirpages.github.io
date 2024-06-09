@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 	<meta charset="utf-8"/>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>HLS</title>
+	<title>Популярные курсы</title>
 
 	<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <script type="module" crossorigin src="./assets/js/lending.js"></script>
-  <script type="module" crossorigin src="./assets/js/index.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/css/index.css">
+
+  <script type="module" crossorigin src="/assets/js/lending.js"></script>
+  <script type="module" crossorigin src="/assets/js/index.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/css/index.css">
 </head>
 <body>
-			<header class="header">
+
+	
+		<header class="header">
 	<div class="wrapper">
-		<div class="mobile-menu-btn">
+		<div class="mobile-menu-btn" data-modal-open=".menu">
 			<svg xmlns="http://www.w3.org/2000/svg" width="33" height="34" viewBox="0 0 33 34" fill="none">
 				<path d="M5.69995 8.74961C5.69995 8.51091 5.79477 8.282 5.96355 8.11321C6.13234 7.94443 6.36126 7.84961 6.59995 7.84961H26.4C26.6386 7.84961 26.8676 7.94443 27.0363 8.11321C27.2051 8.282 27.2999 8.51091 27.2999 8.74961C27.2999 8.98831 27.2051 9.21722 27.0363 9.386C26.8676 9.55479 26.6386 9.64961 26.4 9.64961H6.59995C6.36126 9.64961 6.13234 9.55479 5.96356 9.38601C5.79477 9.21722 5.69995 8.9883 5.69995 8.74961ZM5.69995 16.9996C5.69995 16.7609 5.79477 16.532 5.96355 16.3632C6.13234 16.1944 6.36126 16.0996 6.59995 16.0996H26.4C26.6386 16.0996 26.8676 16.1944 27.0363 16.3632C27.2051 16.532 27.2999 16.7609 27.2999 16.9996C27.2999 17.2383 27.2051 17.4672 27.0363 17.636C26.8676 17.8048 26.6386 17.8996 26.4 17.8996H6.59995C6.36126 17.8996 6.13234 17.8048 5.96355 17.636C5.79477 17.4672 5.69995 17.2383 5.69995 16.9996ZM5.69995 25.2496C5.69995 25.0109 5.79477 24.782 5.96355 24.6132C6.13234 24.4444 6.36126 24.3496 6.59995 24.3496H26.4C26.6386 24.3496 26.8676 24.4444 27.0363 24.6132C27.2051 24.782 27.2999 25.0109 27.2999 25.2496C27.2999 25.4883 27.2051 25.7172 27.0363 25.886C26.8676 26.0548 26.6386 26.1496 26.4 26.1496H6.59995C6.36126 26.1496 6.13234 26.0548 5.96355 25.886C5.79477 25.7172 5.69995 25.4883 5.69995 25.2496Z" stroke-width="1.5"/>
 			</svg>
 		</div>
 		<a href="/" class="logo">
-			<img src="./assets/img/logo.svg" alt="">
+			<img src="./src/assets/img/logo.svg" alt="">
 		</a>
 		<form action="" class="search">
 			<div class="search__icon">
@@ -33,9 +37,10 @@
 			</div>
 		</form>
 		<div class="header__right">
-						<div class="button">
+			
+			<a href="/test" class="button">
 				Пройти тест
-			</div>
+			</a>
 			<div class="header__buttons">
 				<a href="">
 					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -57,7 +62,7 @@
 			</div>
 			<div class="profile">
 				<div class="profile__img">
-					<img src="./assets/img/avatar.jpg" alt="">
+					<img src="./src/assets/img/avatar.jpg" alt="">
 				</div>
 				<div class="profile__name">
 					Александр
@@ -68,54 +73,25 @@
 					</svg>
 				</div>
 			</div>
-					</div>
+			
+		</div>
 	</div>
-</header>	
+</header>
+	
+
 	
 
 	<div class="wrapper">
-		
-			<nav class="new-breadcrumbs">
-  <div class="new-breadcrumbs__item">
-    <a href="#">
-      <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
-        <path d="M1.78125 10.0002L8.87023 2.91125C9.21804 2.56344 9.78196 2.56344 10.1298 2.91125L17.2187 10.0002M3.5625 8.21898V16.2346C3.5625 16.7265 3.96125 17.1252 4.45312 17.1252H7.71875V13.2659C7.71875 12.774 8.1175 12.3752 8.60937 12.3752H10.3906C10.8825 12.3752 11.2812 12.774 11.2812 13.2659V17.1252H14.5469C15.0388 17.1252 15.4375 16.7265 15.4375 16.2346V8.21898M6.53125 17.1252H13.0625" stroke="#6B7280" stroke-width="1.1875" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </a>
-  </div>
-  <div class="new-breadcrumbs__arrow">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 14.7071C6.90237 14.3166 6.90237 13.6834 7.29289 13.2929L10.5858 10L7.29289 6.70711C6.90237 6.31658 6.90237 5.68342 7.29289 5.29289C7.68342 4.90237 8.31658 4.90237 8.70711 5.29289L12.7071 9.29289C13.0976 9.68342 13.0976 10.3166 12.7071 10.7071L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071Z" fill="#6B7280"></path>
-    </svg>
-  </div>
-  <div class="new-breadcrumbs__item active">
-    <a href="#">Каталог курсов</a>
-  </div>
-  <div class="new-breadcrumbs__arrow">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 14.7071C6.90237 14.3166 6.90237 13.6834 7.29289 13.2929L10.5858 10L7.29289 6.70711C6.90237 6.31658 6.90237 5.68342 7.29289 5.29289C7.68342 4.90237 8.31658 4.90237 8.70711 5.29289L12.7071 9.29289C13.0976 9.68342 13.0976 10.3166 12.7071 10.7071L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071Z" fill="#6B7280"></path>
-    </svg>
-  </div>
-  <div class="new-breadcrumbs__item active">
-    <a href="#">Здоровье</a>
-  </div>
-  <div class="new-breadcrumbs__arrow">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29289 14.7071C6.90237 14.3166 6.90237 13.6834 7.29289 13.2929L10.5858 10L7.29289 6.70711C6.90237 6.31658 6.90237 5.68342 7.29289 5.29289C7.68342 4.90237 8.31658 4.90237 8.70711 5.29289L12.7071 9.29289C13.0976 9.68342 13.0976 10.3166 12.7071 10.7071L8.70711 14.7071C8.31658 15.0976 7.68342 15.0976 7.29289 14.7071Z" fill="#6B7280"></path>
-    </svg>
-  </div>
-  <div class="new-breadcrumbs__item active">
-    <span>Курс «Оздоровительная гимнастика»</span>
-  </div>
-</nav>
-		
     <div class="popular-tabs">
       
         <div class="new-tabs">
-  <div class="new-tab active">О курсе</div>
-  <div class="new-tab">Подробнее</div>
-  <div class="new-tab">Об авторе</div>
-  <div class="new-tab">Преимущества</div>
+  
+    <a href="#" class="new-tab active">Популярные</a>
+  
+    <a href="#" class="new-tab ">Бесплатные</a>
+  
+    <a href="#" class="new-tab ">Новые</a>
+  
 </div>
       
     </div>
@@ -129,7 +105,7 @@
             <div class="new-catalog-item">
   <div class="new-catalog-img">
     <div class="catalog-img">
-      <img src="./assets/img/course.png" alt="" />
+      <img src="./src/assets/img/course.png" alt="" />
     </div>
     <div class="new-catalog-tag">Программирование</div>
     <div class="new-catalog-buttons">
@@ -273,13 +249,32 @@
           /></svg
         >8 модулей
       </div>
+      <div class="new-catalog-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+        <path d="M5.53049 7.73979L6.77896 9.05763L8.85975 5.98268M7.19512 1.86182C6.00186 3.05468 4.39056 3.7863 2.61738 3.7863C2.5892 3.7863 2.56107 3.78611 2.53298 3.78574C2.31769 4.47694 2.20122 5.21547 2.20122 5.98271C2.20122 9.25769 4.32325 12.0095 7.19512 12.7897C10.067 12.0095 12.189 9.25769 12.189 5.98271C12.189 5.21547 12.0726 4.47694 11.8573 3.78574C11.8292 3.78611 11.801 3.7863 11.7729 3.7863C9.99968 3.7863 8.38838 3.05468 7.19512 1.86182Z" stroke="#6B7280" stroke-width="1.10976" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        диплом гос. образца
+      </div>
     </div>
-    <div class="new-catalog-price">от 11 000 ₽<div class="old-price">2 200 ₽</div><div class="discount">-15%</div></div>
-    <div class="new-catalog-info">Узнать больше</div>
+    <a href="/" class="new-catalog-info">Узнать больше</a>
+    <table class="new-catalog-prices">
+      <tr>
+        <td>Цена в школе</td>
+        <td>5000 ₽</td>
+      </tr>
+      <tr>
+        <th>Цена у нас</th>
+        <th>3000 ₽</th>
+      </tr>
+      <tr>
+        <td>В рассрочку</td>
+        <td>от 150 ₽/мес</td>
+      </tr>
+    </table>
     <div class="new-catalog-footer">
       <div class="new-catalog-author">
         <div class="new-catalog-author-img">
-          <img src="./assets/img/avatar.jpg" alt="" />
+          <img src="./src/assets/img/avatar.jpg" alt="" />
         </div>
         <div class="new-catalog-author-name">Джули По</div>
       </div>
@@ -311,7 +306,7 @@
             <div class="new-catalog-item">
   <div class="new-catalog-img">
     <div class="catalog-img">
-      <img src="./assets/img/course.png" alt="" />
+      <img src="./src/assets/img/course.png" alt="" />
     </div>
     <div class="new-catalog-tag">Программирование</div>
     <div class="new-catalog-buttons">
@@ -455,13 +450,32 @@
           /></svg
         >8 модулей
       </div>
+      <div class="new-catalog-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+        <path d="M5.53049 7.73979L6.77896 9.05763L8.85975 5.98268M7.19512 1.86182C6.00186 3.05468 4.39056 3.7863 2.61738 3.7863C2.5892 3.7863 2.56107 3.78611 2.53298 3.78574C2.31769 4.47694 2.20122 5.21547 2.20122 5.98271C2.20122 9.25769 4.32325 12.0095 7.19512 12.7897C10.067 12.0095 12.189 9.25769 12.189 5.98271C12.189 5.21547 12.0726 4.47694 11.8573 3.78574C11.8292 3.78611 11.801 3.7863 11.7729 3.7863C9.99968 3.7863 8.38838 3.05468 7.19512 1.86182Z" stroke="#6B7280" stroke-width="1.10976" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        диплом гос. образца
+      </div>
     </div>
-    <div class="new-catalog-price">от 11 000 ₽<div class="old-price">2 200 ₽</div><div class="discount">-15%</div></div>
-    <div class="new-catalog-info">Узнать больше</div>
+    <a href="/" class="new-catalog-info">Узнать больше</a>
+    <table class="new-catalog-prices">
+      <tr>
+        <td>Цена в школе</td>
+        <td>5000 ₽</td>
+      </tr>
+      <tr>
+        <th>Цена у нас</th>
+        <th>3000 ₽</th>
+      </tr>
+      <tr>
+        <td>В рассрочку</td>
+        <td>от 150 ₽/мес</td>
+      </tr>
+    </table>
     <div class="new-catalog-footer">
       <div class="new-catalog-author">
         <div class="new-catalog-author-img">
-          <img src="./assets/img/avatar.jpg" alt="" />
+          <img src="./src/assets/img/avatar.jpg" alt="" />
         </div>
         <div class="new-catalog-author-name">Джули По</div>
       </div>
@@ -493,7 +507,7 @@
             <div class="new-catalog-item">
   <div class="new-catalog-img">
     <div class="catalog-img">
-      <img src="./assets/img/course.png" alt="" />
+      <img src="./src/assets/img/course.png" alt="" />
     </div>
     <div class="new-catalog-tag">Программирование</div>
     <div class="new-catalog-buttons">
@@ -637,13 +651,32 @@
           /></svg
         >8 модулей
       </div>
+      <div class="new-catalog-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+        <path d="M5.53049 7.73979L6.77896 9.05763L8.85975 5.98268M7.19512 1.86182C6.00186 3.05468 4.39056 3.7863 2.61738 3.7863C2.5892 3.7863 2.56107 3.78611 2.53298 3.78574C2.31769 4.47694 2.20122 5.21547 2.20122 5.98271C2.20122 9.25769 4.32325 12.0095 7.19512 12.7897C10.067 12.0095 12.189 9.25769 12.189 5.98271C12.189 5.21547 12.0726 4.47694 11.8573 3.78574C11.8292 3.78611 11.801 3.7863 11.7729 3.7863C9.99968 3.7863 8.38838 3.05468 7.19512 1.86182Z" stroke="#6B7280" stroke-width="1.10976" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        диплом гос. образца
+      </div>
     </div>
-    <div class="new-catalog-price">от 11 000 ₽<div class="old-price">2 200 ₽</div><div class="discount">-15%</div></div>
-    <div class="new-catalog-info">Узнать больше</div>
+    <a href="/" class="new-catalog-info">Узнать больше</a>
+    <table class="new-catalog-prices">
+      <tr>
+        <td>Цена в школе</td>
+        <td>5000 ₽</td>
+      </tr>
+      <tr>
+        <th>Цена у нас</th>
+        <th>3000 ₽</th>
+      </tr>
+      <tr>
+        <td>В рассрочку</td>
+        <td>от 150 ₽/мес</td>
+      </tr>
+    </table>
     <div class="new-catalog-footer">
       <div class="new-catalog-author">
         <div class="new-catalog-author-img">
-          <img src="./assets/img/avatar.jpg" alt="" />
+          <img src="./src/assets/img/avatar.jpg" alt="" />
         </div>
         <div class="new-catalog-author-name">Джули По</div>
       </div>
@@ -675,7 +708,7 @@
             <div class="new-catalog-item">
   <div class="new-catalog-img">
     <div class="catalog-img">
-      <img src="./assets/img/course.png" alt="" />
+      <img src="./src/assets/img/course.png" alt="" />
     </div>
     <div class="new-catalog-tag">Программирование</div>
     <div class="new-catalog-buttons">
@@ -819,13 +852,32 @@
           /></svg
         >8 модулей
       </div>
+      <div class="new-catalog-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
+        <path d="M5.53049 7.73979L6.77896 9.05763L8.85975 5.98268M7.19512 1.86182C6.00186 3.05468 4.39056 3.7863 2.61738 3.7863C2.5892 3.7863 2.56107 3.78611 2.53298 3.78574C2.31769 4.47694 2.20122 5.21547 2.20122 5.98271C2.20122 9.25769 4.32325 12.0095 7.19512 12.7897C10.067 12.0095 12.189 9.25769 12.189 5.98271C12.189 5.21547 12.0726 4.47694 11.8573 3.78574C11.8292 3.78611 11.801 3.7863 11.7729 3.7863C9.99968 3.7863 8.38838 3.05468 7.19512 1.86182Z" stroke="#6B7280" stroke-width="1.10976" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        диплом гос. образца
+      </div>
     </div>
-    <div class="new-catalog-price">от 11 000 ₽<div class="old-price">2 200 ₽</div><div class="discount">-15%</div></div>
-    <div class="new-catalog-info">Узнать больше</div>
+    <a href="/" class="new-catalog-info">Узнать больше</a>
+    <table class="new-catalog-prices">
+      <tr>
+        <td>Цена в школе</td>
+        <td>5000 ₽</td>
+      </tr>
+      <tr>
+        <th>Цена у нас</th>
+        <th>3000 ₽</th>
+      </tr>
+      <tr>
+        <td>В рассрочку</td>
+        <td>от 150 ₽/мес</td>
+      </tr>
+    </table>
     <div class="new-catalog-footer">
       <div class="new-catalog-author">
         <div class="new-catalog-author-img">
-          <img src="./assets/img/avatar.jpg" alt="" />
+          <img src="./src/assets/img/avatar.jpg" alt="" />
         </div>
         <div class="new-catalog-author-name">Джули По</div>
       </div>
@@ -901,7 +953,7 @@
       </div>
     </div>
     <div class="page-links">
-      <a href="#" class="page-link">
+      <a href="/catalog" class="page-link">
         Перейти в каталог
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -923,7 +975,185 @@
   </div>
 
 
-			<footer class="footer">
+
+	
+		<div class="modal">
+    <!-- .active -->
+    <div class="modal__auth">
+        <div class="title">
+            Войти
+        </div>
+        <div class="text">
+          Отправить код для входа на E-mail
+        </div>
+        <form class="modal__form">
+          <input type="text" name="search" class="input" autocomplete="off" placeholder="E-mail" required>
+          <div class="modal__buttons">
+            <div class="button">
+              Отправить код
+            </div>
+            <div class="button-border" data-modal-open=".modal__reg">
+              У меня еще нет аккаунта
+            </div>
+          </div>
+          <input type="text" name="search" class="input" autocomplete="off" placeholder="1234" required>
+          <button type="submit" class="button-black submit-button">
+            Войти
+          </button>
+        </form>
+    </div>
+</div>
+		<div class="modal">
+    <!-- .active -->
+    <div class="modal__reg">
+        <div class="title">
+            Регистрация
+        </div>
+        <div class="text">
+          При регистрации необходимо указывать действующий адрес электронной почты к которой вы имеете доступ.
+        </div>
+        <form class="modal__form">
+          <input type="text" name="search" class="input" autocomplete="off" placeholder="Имя" required>
+          <input type="text" name="search" class="input" autocomplete="off" placeholder="E-mail" required>
+          <div class="modal__buttons">
+            <button type="submit" class="button reg-button">
+              Зарегистрироваться
+            </button>
+            <div class="button-border" data-modal-open=".modal__auth">
+              У меня есть аккаунт
+            </div>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <div class="checkbox__icon"></div>
+            <div class="checkbox__text">
+              Настоящим подтверждаю, что я ознакомлен с политикой конфиденциальности и согласен на обработку персональных данных
+              в соответствии с <a href="#">указанным здесь текстом</a>
+            </div>
+          </label>
+          <label class="checkbox">
+            <input type="checkbox" required>
+            <div class="checkbox__icon"></div>
+            <div class="checkbox__text">
+              Я даю <a href="#">согласие на получение рассылки</a> о предложениях, информации о продуктах/услугах и иной рекламной информации от ООО «Информационные технологические системы» (ОГРН 1197746586971) путем отправки сообщений по всем указанным мною при регистрации каналам
+            </div>
+          </label>
+        </form>
+    </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const regButton = document.querySelector('.reg-button');
+    regButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.modalOpen('.modal__thanks');
+    });
+  });
+</script>
+		<div class="modal">
+    <!-- .active -->
+    <div class="modal__thanks">
+        <div class="title">
+            Спасибо!
+        </div>
+        <div class="text">
+          Вам необходимо <span>проверить почту</span> указанную при регистрации, а также папку СПАМ!
+        </div>
+    </div>
+</div>
+		<div class="modal">
+    <!-- .active -->
+    <div class="menu">
+      <div class="menu__wrapper">
+        <div class="menu__header">
+          <div class="menu__button" data-modal-close>
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="34" viewBox="0 0 33 34" fill="none">
+              <path d="M5.69995 8.74961C5.69995 8.51091 5.79477 8.282 5.96355 8.11321C6.13234 7.94443 6.36126 7.84961 6.59995 7.84961H26.4C26.6386 7.84961 26.8676 7.94443 27.0363 8.11321C27.2051 8.282 27.2999 8.51091 27.2999 8.74961C27.2999 8.98831 27.2051 9.21722 27.0363 9.386C26.8676 9.55479 26.6386 9.64961 26.4 9.64961H6.59995C6.36126 9.64961 6.13234 9.55479 5.96356 9.38601C5.79477 9.21722 5.69995 8.9883 5.69995 8.74961ZM5.69995 16.9996C5.69995 16.7609 5.79477 16.532 5.96355 16.3632C6.13234 16.1944 6.36126 16.0996 6.59995 16.0996H26.4C26.6386 16.0996 26.8676 16.1944 27.0363 16.3632C27.2051 16.532 27.2999 16.7609 27.2999 16.9996C27.2999 17.2383 27.2051 17.4672 27.0363 17.636C26.8676 17.8048 26.6386 17.8996 26.4 17.8996H6.59995C6.36126 17.8996 6.13234 17.8048 5.96355 17.636C5.79477 17.4672 5.69995 17.2383 5.69995 16.9996ZM5.69995 25.2496C5.69995 25.0109 5.79477 24.782 5.96355 24.6132C6.13234 24.4444 6.36126 24.3496 6.59995 24.3496H26.4C26.6386 24.3496 26.8676 24.4444 27.0363 24.6132C27.2051 24.782 27.2999 25.0109 27.2999 25.2496C27.2999 25.4883 27.2051 25.7172 27.0363 25.886C26.8676 26.0548 26.6386 26.1496 26.4 26.1496H6.59995C6.36126 26.1496 6.13234 26.0548 5.96355 25.886C5.79477 25.7172 5.69995 25.4883 5.69995 25.2496Z" stroke-width="1.5"></path>
+            </svg>
+          </div>
+          <div class="menu__logo">
+            <img src="./src/assets/img/menu-logo.svg" alt="">
+          </div>
+        </div>
+        <div class="menu__links">
+          <a href="#" class="menu__link">
+            <div class="menu__icon">
+              <img src="./src/assets/img/home.svg" alt="">
+            </div>
+            <div class="menu__text">
+              Главная
+            </div>
+          </a>
+          <div class="menu__dropdown">
+            <div class="menu__dropdown-button">
+              <div class="menu__icon">
+                <img src="./src/assets/img/currency-dollar.svg" alt="">
+              </div>
+              <div class="menu__text">
+                Финансы
+              </div>
+              <div class="menu__arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7698 12.7906C14.4713 13.0777 13.9965 13.0684 13.7094 12.7698L10 8.83208L6.29062 12.7698C6.00353 13.0684 5.52875 13.0777 5.23017 12.7906C4.93159 12.5035 4.92228 12.0287 5.20937 11.7302L9.45937 7.23017C9.60078 7.08311 9.79599 7 10 7C10.204 7 10.3992 7.08311 10.5406 7.23017L14.7906 11.7302C15.0777 12.0287 15.0684 12.5035 14.7698 12.7906Z" fill="#0F172A"/>
+                </svg>
+              </div>
+            </div>
+            <div class="menu__dropdown-list">
+              <a href="#">Планирование</a>
+              <a href="#">Управление</a>
+              <a href="#">Инвестиции</a>
+              <a href="#">Стратегии</a>
+            </div>
+          </div>
+          <a href="#" class="menu__link">
+            <div class="menu__icon">
+              <img src="./src/assets/img/trophy.svg" alt="">
+            </div>
+            <div class="menu__text">
+              Личностный рост
+            </div>
+          </a>
+          <a href="#" class="menu__link">
+            <div class="menu__icon">
+              <img src="./src/assets/img/briefcase.svg" alt="">
+            </div>
+            <div class="menu__text">
+              Бизнес-обучение
+            </div>
+          </a>
+          <a href="#" class="menu__link">
+            <div class="menu__icon">
+              <img src="./src/assets/img/bolt.svg" alt="">
+            </div>
+            <div class="menu__text">
+              Здоровье и спорт
+            </div>
+          </a>
+          <a href="#" class="menu__link">
+            <div class="menu__icon">
+              <img src="./src/assets/img/computer-desktop.svg" alt="">
+            </div>
+            <div class="menu__text">
+              IT-разработка
+            </div>
+          </a>
+          <a href="#" class="menu__link">
+            <div class="menu__icon">
+              <img src="./src/assets/img/academic-cap.svg" alt="">
+            </div>
+            <div class="menu__text">
+              Создание онлайн школы
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+</div>
+	
+
+	
+		<footer class="footer">
   <div class="wrapper">
     <div class="footer__container">
       <div class="footer__links">
@@ -937,18 +1167,18 @@
       </div>
       <div class="footer__socials">
         <a href="#" class="footer__social">
-          <img src="./assets/img/vk.svg" alt="">
+          <img src="./src/assets/img/vk.svg" alt="">
         </a>
         <a href="#" class="footer__social">
-          <img src="./assets/img/yandex.svg" alt="">
+          <img src="./src/assets/img/yandex.svg" alt="">
         </a>
         <a href="#" class="footer__social">
-          <img src="./assets/img/telegram.svg" alt="">
+          <img src="./src/assets/img/telegram.svg" alt="">
         </a>
       </div>
       <div class="footer__column">
         <a href="" class="logo">
-          <img src="./assets/img/footer-logo.svg" alt="">
+          <img src="./src/assets/img/footer-logo.svg" alt="">
         </a> 
         <div class="footer__buttons">
           <div class="button">
@@ -982,6 +1212,8 @@
       </div>
     </div>
   </div>
-</footer>	
+</footer>
+	
+
 </body>
 </html>
