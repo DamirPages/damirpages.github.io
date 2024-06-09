@@ -7,9 +7,11 @@ import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 Fancybox.bind('[data-fancybox]');
 
-const selects = document.querySelectorAll('.selectize');
-selects.forEach(select => {
-	NiceSelect.bind(select);
+document.addEventListener('DOMContentLoaded', () => {
+	const selects = document.querySelectorAll('.selectize');
+	selects.forEach(select => {
+		NiceSelect.bind(select);
+	});
 });
 
 const dropdowns = document.querySelectorAll('.menu__dropdown-button');
