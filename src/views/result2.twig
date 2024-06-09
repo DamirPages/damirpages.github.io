@@ -1,0 +1,99 @@
+{% extends "templates/layouts/test.twig" %}
+
+{% set title = "Результат теста. Чувственная личность" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+
+  <div class="wrapper">
+		{% block breadcrumbs %}
+			{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+        {'link': '/test', 'text': 'Тест на тип личности', 'active': false},
+        {'link': '/result1', 'text': 'Результат теста', 'active': true},
+      ]} %}
+		{% endblock %}
+	</div>
+
+  <div class="wrapper result">
+    <div class="result__container">
+      <div class="result__result">
+        <span>Результат теста:</span>
+      </div>
+      <div class="title">
+        Чувственная личность
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Ваши сильные стороны
+        </div>
+        <ul class="result__strong">
+          <li>Доброжелательность</li>
+          <li>Коммуникабельность</li>
+          <li>Умение слушать других</li>
+          <li>Эмпатия</li>
+          <li>Спокойствие</li>
+          <li>Чувственность</li>
+          <li>Детальность</li>
+        </ul>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Какие направления в работе вам подойдут?
+        </div>
+        <div class="result__tags">
+          <div class="result__tag">
+            Управление
+          </div>
+          <div class="result__tag">
+            Психология
+          </div>
+          <div class="result__tag">
+            HR
+          </div>
+          <div class="result__tag">
+            Социология
+          </div>
+          <div class="result__tag">
+            Медицина
+          </div>
+          <div class="result__tag">
+            Маркетинг и PR
+          </div>
+          <div class="result__tag">
+            Туризм
+          </div>
+          <div class="result__tag">
+            Музыка
+          </div>
+          <div class="result__tag">
+            Литература
+          </div>
+          <div class="result__tag">
+            Служба сервиса
+          </div>
+          <div class="result__tag">
+            Творчество
+          </div>
+        </div>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Но для того чтобы стать успешным в этих направлениях вам  стоит поработать над такими качествами как:
+        </div>
+        <ul class="result__update">
+          <li>Стрессоустойчивость</li>
+          <li>Ориентация на результат</li>
+          <li>Скорость принятия решений</li>
+          <li>Лидерские качества</li>
+        </ul>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          На основе результата теста, мы подобрали для вас следующие обучающие программы:
+        </div>
+      </div>
+      <a href="/recommended" class="button">Посмотреть</a>
+    </div>
+  </div>
+
+{% endblock %}

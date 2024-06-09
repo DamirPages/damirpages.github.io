@@ -1,7 +1,26 @@
-{% extends "templates/layouts/base.twig" %}
+{% extends "templates/layouts/test.twig" %}
 
-{% set title = "404 - страница не найдена" %}
+{% set title = "Ошибка 404" %}
+{% set isAuthorized = true %}
 
-{% block page %}
-	<span>404</span>
+{% block content %}
+	<div class="not-page">
+		<div class="wrapper">
+			<div class="not-page-title">
+				404 ошибка
+			</div>
+			<div class="title">
+				Страница не найдена
+			</div>
+			<div class="text">
+				Извините, мы не смогли найти страницу, которую вы ищете.
+			</div>
+			<a href="/" class="button">
+				На главную
+			</a>
+			<div class="not-page-img">
+				<img src="./src/assets/img/404.svg" alt="">
+			</div>
+		</div>
+	</div>
 {% endblock %}

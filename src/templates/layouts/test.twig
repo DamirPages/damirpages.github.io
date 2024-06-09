@@ -18,6 +18,14 @@
 
 	{% block content %}{% endblock %}
 {% endblock %}
+
+{% block modals %}
+	{% include '../partials/modals/login.twig' %}
+	{% include '../partials/modals/reg.twig' %}
+	{% include '../partials/modals/thanks.twig' %}
+	{% include '../partials/modals/menu.twig' %}
+{% endblock %}
+
 <script type="module" src="/src/scripts/main/nice-select.js"></script>
 <script type="module" src="/src/scripts/index.js"></script>
 <script type="module" src="/src/scripts/main/lending.js"></script>

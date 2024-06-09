@@ -1,0 +1,83 @@
+{% extends "templates/layouts/test.twig" %}
+
+{% set title = "Результат теста. Общительная личность" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+
+  <div class="wrapper">
+		{% block breadcrumbs %}
+			{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+        {'link': '/test', 'text': 'Тест на тип личности', 'active': false},
+        {'link': '/result1', 'text': 'Результат теста', 'active': true},
+      ]} %}
+		{% endblock %}
+	</div>
+
+  <div class="wrapper result">
+    <div class="result__container">
+      <div class="result__result">
+        <span>Результат теста:</span>
+      </div>
+      <div class="title">
+        Общительная личность
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Ваши сильные стороны
+        </div>
+        <ul class="result__strong">
+          <li>Позитивный настрой</li>
+          <li>Коммуникабельность</li>
+          <li>Способность быстро решать вопросы</li>
+          <li>Организаторские способности</li>
+          <li>Ориентированность на новые возможности</li>
+        </ul>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Какие направления в работе вам подойдут?
+        </div>
+        <div class="result__tags">
+          <div class="result__tag">
+            Спорт
+          </div>
+          <div class="result__tag">
+            Продажи
+          </div>
+          <div class="result__tag">
+            Туризм
+          </div>
+          <div class="result__tag">
+            Маркетинг и PR
+          </div>
+          <div class="result__tag">
+            Журналистика
+          </div>
+          <div class="result__tag">
+            Сервис
+          </div>
+        </div>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Но для того чтобы стать успешным в этих направлениях вам  стоит поработать над такими качествами как:
+        </div>
+        <ul class="result__update">
+          <li>Тактичность</li>
+          <li>Сдержанность</li>
+          <li>Усидчивость</li>
+          <li>Планирование</li>
+          <li>Самодисциплина</li>
+        </ul>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          На основе результата теста, мы подобрали для вас следующие обучающие программы:
+        </div>
+      </div>
+      <a href="/recommended" class="button">Посмотреть</a>
+    </div>
+  </div>
+
+{% endblock %}

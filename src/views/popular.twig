@@ -1,17 +1,18 @@
 {% extends "templates/layouts/base.twig" %}
 
-{% set title = "HLS" %}
+{% set title = "Популярные курсы" %}
 {% set isAuthorized = true %}
 
 {% block content %}
 
 	<div class="wrapper">
-		{% block breadcrumbs %}
-			{% include '../src/templates/partials/breadcrumbs.twig' %}
-		{% endblock %}
     <div class="popular-tabs">
       {% block tabs %}
-        {% include '../src/templates/partials/landing/tabs.twig' %}
+        {% include '../src/templates/partials/landing/tabs.twig' with {'tabs': [
+          {'name': 'Популярные', 'active': true, 'link': '#'},
+          {'name': 'Бесплатные', 'active': false, 'link': '#'},
+          {'name': 'Новые', 'active': false, 'link': '#'},
+        ]} %}
       {% endblock %}
     </div>
 	</div>
@@ -80,7 +81,7 @@
       </div>
     </div>
     <div class="page-links">
-      <a href="#" class="page-link">
+      <a href="/catalog" class="page-link">
         Перейти в каталог
         <svg
           xmlns="http://www.w3.org/2000/svg"

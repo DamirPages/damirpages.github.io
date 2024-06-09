@@ -1,0 +1,67 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Предлагаемые курсы" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+
+	<div class="wrapper">
+		{% block breadcrumbs %}
+			{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+        {'link': '/test', 'text': 'Тест на тип личности', 'active': false},
+        {'link': '/result1', 'text': 'Результат теста', 'active': false},
+        {'link': '/recommended', 'text': 'Предлагаемые курсы', 'active': true},
+      ]} %}
+		{% endblock %}
+	</div>
+
+	<div class="new-catalog">
+		<div class="wrapper">
+			<div class="title">
+				Предлагаемые курсы<br>
+				<span>для работы над личными качествами</span>
+			</div>
+			<div class="new-catalog-container">
+				{% block cards %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+				{% endblock %}
+			</div>
+			<div class="title">
+				Предлагаемые курсы<br>
+				<span>для работы над профессиональными качествами</span>
+			</div>
+			<div class="new-catalog-container">
+				{% block cards %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+				{% endblock %}
+			</div>
+			<div class="page-links">
+      <a href="/catalog" class="page-link">
+        Перейти в каталог
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M17.25 8.25L21 12M21 12L17.25 15.75M21 12H3"
+            stroke="#212A34"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+		</div>
+	</div>
+
+{% endblock %}

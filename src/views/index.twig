@@ -1,6 +1,6 @@
 {% extends "templates/layouts/base.twig" %}
 
-{% set title = "HLS" %}
+{% set title = "Лендинг о курсе" %}
 {% set isAuthorized = false %}
 
 {% block content %}
@@ -9,11 +9,20 @@
     <div class="wrapper">
       <div class="landing-header-container">
         {% block breadcrumbs %}
-          {% include '../src/templates/partials/breadcrumbs.twig' %}
-        {% endblock %}
+					{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+						{'link': '/catalog', 'text': 'Каталог курсов', 'active': false},
+						{'link': '#', 'text': 'Здоровье', 'active': false},
+						{'link': '#', 'text': 'Курс «Оздоровительная гимнастика»', 'active': true},
+					]} %}
+				{% endblock %}
         {% block tabs %}
-          {% include '../src/templates/partials/landing/tabs.twig' %}
-        {% endblock %}
+					{% include '../src/templates/partials/landing/tabs.twig' with {'tabs': [
+						{'name': 'О курсе', 'active': true, 'link': '#'},
+						{'name': 'Подробнее', 'active': false, 'link': '#'},
+						{'name': 'Об авторе', 'active': false, 'link': '#'},
+						{'name': 'Преимущества', 'active': false, 'link': '#'},
+					]} %}
+				{% endblock %}
       </div>
       <div class="landing-header-button">
         <div class="button">
@@ -28,7 +37,7 @@
 	{% endblock %}
 
 	{% block includes %}
-		{% include '../src/templates/partials/landing/include.twig' %}
+		{% include '../src/templates/partials/landing/include2.twig' %}
 	{% endblock %}
 
 	{% block slider %}

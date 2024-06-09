@@ -1,6 +1,5 @@
 <div class="new-tabs">
-  <div class="new-tab active">О курсе</div>
-  <div class="new-tab">Подробнее</div>
-  <div class="new-tab">Об авторе</div>
-  <div class="new-tab">Преимущества</div>
+  {% for tab in tabs %}
+    <a href="{{tab.link}}" class="new-tab {% if tab.active %}active{% endif %}">{{ tab.name }}</a>
+  {% endfor %}
 </div>

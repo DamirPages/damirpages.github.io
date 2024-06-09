@@ -18,6 +18,13 @@
 
 	{% block content %}{% endblock %}
 
+	{% block modals %}
+		{% include '../partials/modals/login.twig' %}
+		{% include '../partials/modals/reg.twig' %}
+		{% include '../partials/modals/thanks.twig' %}
+		{% include '../partials/modals/menu.twig' %}
+	{% endblock %}
+
 	{% block footer %}
 		{% include '../partials/footer.twig' %}
 	{% endblock %}
