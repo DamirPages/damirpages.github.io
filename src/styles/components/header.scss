@@ -13,7 +13,7 @@
     flex-shrink: 0;
   }
   &__buttons{
-    margin-left: 50px;
+    margin-left: 30px;
     & > *{
       display: inline-block;
       &:hover svg{
@@ -35,7 +35,7 @@
 }
 
 .mobile-menu-btn{
-  margin-right: 40px;
+  margin-right: 20px;
   flex-shrink: 0;
   cursor: pointer;
   &:hover svg{
@@ -50,7 +50,7 @@
 }
 
 .logo{
-  margin-right: 40px;
+  margin-right: 20px;
   max-width: 316px;
   img{
     max-width: 100%;
@@ -60,7 +60,7 @@
 .search{
   width: 300px;
   position: relative;
-  margin-right: 40px;
+  margin-right: 20px;
   flex-shrink: 0;
   &__icon{
     position: absolute;
