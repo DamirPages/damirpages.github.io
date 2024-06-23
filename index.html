@@ -43,13 +43,13 @@
 			<img src="/assets/img/logo.svg" alt="">
 		</a>
 		<form action="" class="search">
-			<div class="search__icon">
+			<button type="submit" class="search__icon">
 				<svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
 					<path d="M16.4111 15.75L11.9111 11.25M13.4111 7.5C13.4111 8.18944 13.2753 8.87213 13.0115 9.50909C12.7477 10.146 12.361 10.7248 11.8734 11.2123C11.3859 11.6998 10.8072 12.0865 10.1702 12.3504C9.53326 12.6142 8.85057 12.75 8.16113 12.75C7.47169 12.75 6.789 12.6142 6.15204 12.3504C5.51509 12.0865 4.93633 11.6998 4.44882 11.2123C3.96131 10.7248 3.5746 10.146 3.31077 9.50909C3.04693 8.87213 2.91113 8.18944 2.91113 7.5C2.91113 6.10761 3.46426 4.77226 4.44882 3.78769C5.43339 2.80312 6.76875 2.25 8.16113 2.25C9.55352 2.25 10.8889 2.80312 11.8734 3.78769C12.858 4.77226 13.4111 6.10761 13.4111 7.5Z" stroke="#6B7280" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 				</svg>
-			</div>
+			</button>
 			<div class="search__input">
-				<input type="text" name="search" class="input" autocomplete="off">
+				<input type="text" name="search" class="input" autocomplete="off" placeholder="Умный поиск">
 			</div>
 		</form>
 		<div class="header__right">
@@ -71,7 +71,7 @@
         
 					<nav class="new-breadcrumbs">
   <div class="new-breadcrumbs__item">
-    <a href="/">
+    <a href="/catalog">
       <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none">
         <path d="M1.78125 10.0002L8.87023 2.91125C9.21804 2.56344 9.78196 2.56344 10.1298 2.91125L17.2187 10.0002M3.5625 8.21898V16.2346C3.5625 16.7265 3.96125 17.1252 4.45312 17.1252H7.71875V13.2659C7.71875 12.774 8.1175 12.3752 8.60937 12.3752H10.3906C10.8825 12.3752 11.2812 12.774 11.2812 13.2659V17.1252H14.5469C15.0388 17.1252 15.4375 16.7265 15.4375 16.2346V8.21898M6.53125 17.1252H13.0625" stroke="#6B7280" stroke-width="1.1875" stroke-linecap="round" stroke-linejoin="round"></path>
       </svg>
@@ -110,18 +110,18 @@
         
 					<div class="new-tabs">
   
-    <a href="#" class="new-tab active">О курсе</a>
+    <a href="#course" class="new-tab ">О курсе</a>
   
-    <a href="#" class="new-tab ">Подробнее</a>
+    <a href="#more" class="new-tab ">Подробнее</a>
   
-    <a href="#" class="new-tab ">Об авторе</a>
+    <a href="#author" class="new-tab ">Об авторе</a>
   
-    <a href="#" class="new-tab ">Преимущества</a>
+    <a href="#adv" class="new-tab ">Преимущества</a>
   
 </div>
 				
       </div>
-      <div class="landing-header-button">
+      <div class="landing-header-button show-in-scroll">
         <div class="button">
           Купить курс
         </div>
@@ -130,7 +130,7 @@
   </div>
 
   
-		<div class="wrapper">
+		<div class="wrapper anchor-link" id="course">
   <div class="banner">
     <h1 class="banner-title">Курс «Оздоровительная гимнастика»</h1>
     <div class="banner-tags">
@@ -170,6 +170,32 @@
     <div class="banner-img">
       <img src="/assets/img/banner.png" alt="">
     </div>
+    <div class="include-aside">
+      <table class="include-aside-table">
+        <tr>
+          <td>Цена в школе</td>
+          <td>5000 ₽</td>
+        </tr>
+        <tr>
+          <th>Цена у нас</th>
+          <th>3000 ₽</th>
+        </tr>
+        <tr>
+          <td>В рассрочку</td>
+          <td>от 150 ₽/мес</td>
+        </tr>
+      </table>
+      <div class="include-discount">
+        <div class="include-discount-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
+            <path d="M9 15.1851L15 9.18506M19.5 5.69205V22.6851L15.75 21.1851L12 22.6851L8.25 21.1851L4.5 22.6851V5.69205C4.5 4.58406 5.30608 3.6352 6.40668 3.50747C8.24156 3.29452 10.108 3.18506 12 3.18506C13.892 3.18506 15.7584 3.29452 17.5933 3.50747C18.6939 3.6352 19.5 4.58406 19.5 5.69205ZM9.75 9.93506H9.7575V9.94256H9.75V9.93506ZM10.125 9.93506C10.125 10.1422 9.95711 10.3101 9.75 10.3101C9.54289 10.3101 9.375 10.1422 9.375 9.93506C9.375 9.72795 9.54289 9.56006 9.75 9.56006C9.95711 9.56006 10.125 9.72795 10.125 9.93506ZM14.25 14.4351H14.2575V14.4426H14.25V14.4351ZM14.625 14.4351C14.625 14.6422 14.4571 14.8101 14.25 14.8101C14.0429 14.8101 13.875 14.6422 13.875 14.4351C13.875 14.228 14.0429 14.0601 14.25 14.0601C14.4571 14.0601 14.625 14.228 14.625 14.4351Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+        <div class="include-discount-old-price">5000 ₽</div>
+        <div class="include-discount-count">-40%</div>
+      </div>
+      <div class="button button-yellow">Купить курс</div>
+    </div>
   </div>
 </div>
 	
@@ -208,19 +234,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.9351C14.4183 18.9351 18 15.3533 18 10.9351C18 6.51678 14.4183 2.93506 10 2.93506C5.58172 2.93506 2 6.51678 2 10.9351C2 15.3533 5.58172 18.9351 10 18.9351ZM13.7071 9.64217C14.0976 9.25164 14.0976 8.61848 13.7071 8.22795C13.3166 7.83743 12.6834 7.83743 12.2929 8.22795L9 11.5208L7.70711 10.228C7.31658 9.83743 6.68342 9.83743 6.29289 10.228C5.90237 10.6185 5.90237 11.2516 6.29289 11.6422L8.29289 13.6422C8.68342 14.0327 9.31658 14.0327 9.70711 13.6422L13.7071 9.64217Z" fill="#FAB706"></path>
           </svg>
-          Уровень сложности: для новичков
-        </div>
-        <div class="include-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.9351C14.4183 18.9351 18 15.3533 18 10.9351C18 6.51678 14.4183 2.93506 10 2.93506C5.58172 2.93506 2 6.51678 2 10.9351C2 15.3533 5.58172 18.9351 10 18.9351ZM13.7071 9.64217C14.0976 9.25164 14.0976 8.61848 13.7071 8.22795C13.3166 7.83743 12.6834 7.83743 12.2929 8.22795L9 11.5208L7.70711 10.228C7.31658 9.83743 6.68342 9.83743 6.29289 10.228C5.90237 10.6185 5.90237 11.2516 6.29289 11.6422L8.29289 13.6422C8.68342 14.0327 9.31658 14.0327 9.70711 13.6422L13.7071 9.64217Z" fill="#FAB706"></path>
-          </svg>
           Тех. поддержка: чат в мессенджере
-        </div>
-        <div class="include-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.9351C14.4183 18.9351 18 15.3533 18 10.9351C18 6.51678 14.4183 2.93506 10 2.93506C5.58172 2.93506 2 6.51678 2 10.9351C2 15.3533 5.58172 18.9351 10 18.9351ZM13.7071 9.64217C14.0976 9.25164 14.0976 8.61848 13.7071 8.22795C13.3166 7.83743 12.6834 7.83743 12.2929 8.22795L9 11.5208L7.70711 10.228C7.31658 9.83743 6.68342 9.83743 6.29289 10.228C5.90237 10.6185 5.90237 11.2516 6.29289 11.6422L8.29289 13.6422C8.68342 14.0327 9.31658 14.0327 9.70711 13.6422L13.7071 9.64217Z" fill="#FAB706"></path>
-          </svg>
-          Бонусы: только для дорогих тарифов
         </div>
         <div class="include-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
@@ -298,38 +312,12 @@
         </div>
       </div>
     </div>
-    <div class="include-aside">
-      <table class="include-aside-table">
-        <tr>
-          <td>Цена в школе</td>
-          <td>5000 ₽</td>
-        </tr>
-        <tr>
-          <th>Цена у нас</th>
-          <th>3000 ₽</th>
-        </tr>
-        <tr>
-          <td>В рассрочку</td>
-          <td>от 150 ₽/мес</td>
-        </tr>
-      </table>
-      <div class="include-discount">
-        <div class="include-discount-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="25" viewBox="0 0 24 25" fill="none">
-            <path d="M9 15.1851L15 9.18506M19.5 5.69205V22.6851L15.75 21.1851L12 22.6851L8.25 21.1851L4.5 22.6851V5.69205C4.5 4.58406 5.30608 3.6352 6.40668 3.50747C8.24156 3.29452 10.108 3.18506 12 3.18506C13.892 3.18506 15.7584 3.29452 17.5933 3.50747C18.6939 3.6352 19.5 4.58406 19.5 5.69205ZM9.75 9.93506H9.7575V9.94256H9.75V9.93506ZM10.125 9.93506C10.125 10.1422 9.95711 10.3101 9.75 10.3101C9.54289 10.3101 9.375 10.1422 9.375 9.93506C9.375 9.72795 9.54289 9.56006 9.75 9.56006C9.95711 9.56006 10.125 9.72795 10.125 9.93506ZM14.25 14.4351H14.2575V14.4426H14.25V14.4351ZM14.625 14.4351C14.625 14.6422 14.4571 14.8101 14.25 14.8101C14.0429 14.8101 13.875 14.6422 13.875 14.4351C13.875 14.228 14.0429 14.0601 14.25 14.0601C14.4571 14.0601 14.625 14.228 14.625 14.4351Z" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-          </svg>
-        </div>
-        <div class="include-discount-old-price">5000 ₽</div>
-        <div class="include-discount-count">-40%</div>
-      </div>
-      <div class="button button-yellow">Узнать больше</div>
-    </div>
   </div>
 </div>
 	
 
 	
-		<div class="author-slider">
+		<div class="author-slider anchor-link" id="author">
   <div class="wrapper">
     <div class="new-slider new-slider-big">
       <div class="swiper">
@@ -636,7 +624,7 @@
 	
 
 	
-		<div class="wrapper">
+		<div class="wrapper anchor-link" id="more">
   <div class="desc">
     <h2 class="desc-title">Описание курса</h2>
     <div class="desc-desc">
@@ -779,7 +767,7 @@
 	
 
 	
-		<div class="wrapper">
+		<div class="wrapper anchor-link" id="adv">
   <div class="info">
     <h2 class="info__title">
       Особенности учебного процесса
@@ -816,21 +804,6 @@
             В рабочее время<br> 
             Чат в мессенджере<br>
             Телефон
-          </div>
-        </div>
-      </div>
-      <div class="info__item">
-        <div class="info__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M12 6.04168C10.4077 4.61656 8.30506 3.75 6 3.75C4.94809 3.75 3.93834 3.93046 3 4.26212V18.5121C3.93834 18.1805 4.94809 18 6 18C8.30506 18 10.4077 18.8666 12 20.2917M12 6.04168C13.5923 4.61656 15.6949 3.75 18 3.75C19.0519 3.75 20.0617 3.93046 21 4.26212V18.5121C20.0617 18.1805 19.0519 18 18 18C15.6949 18 13.5923 18.8666 12 20.2917M12 6.04168V20.2917" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="info__text">
-          <div class="info__item-title">
-            Уровень сложности
-          </div>
-          <div class="info__item-text">
-            Для новичков
           </div>
         </div>
       </div>
@@ -876,21 +849,6 @@
           </div>
           <div class="info__item-text">
             Да
-          </div>
-        </div>
-      </div>
-      <div class="info__item">
-        <div class="info__icon">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M21 11.25V19.5C21 20.3284 20.3284 21 19.5 21H5.25C4.42157 21 3.75 20.3284 3.75 19.5V11.25M12 4.875C12 3.42525 10.8247 2.25 9.375 2.25C7.92525 2.25 6.75 3.42525 6.75 4.875C6.75 6.32475 7.92525 7.5 9.375 7.5C10.1095 7.5 12 7.5 12 7.5M12 4.875C12 5.59024 12 7.5 12 7.5M12 4.875C12 3.42525 13.1753 2.25 14.625 2.25C16.0747 2.25 17.25 3.42525 17.25 4.875C17.25 6.32475 16.0747 7.5 14.625 7.5C13.8905 7.5 12 7.5 12 7.5M12 7.5V21M3.375 11.25H21.375C21.9963 11.25 22.5 10.7463 22.5 10.125V8.625C22.5 8.00368 21.9963 7.5 21.375 7.5H3.375C2.75368 7.5 2.25 8.00368 2.25 8.625V10.125C2.25 10.7463 2.75368 11.25 3.375 11.25Z" stroke="#0F172A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <div class="info__text">
-          <div class="info__item-title">
-            Бонусы
-          </div>
-          <div class="info__item-text">
-            Только для дорогих тарифов
           </div>
         </div>
       </div>
@@ -949,19 +907,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.9351C14.4183 18.9351 18 15.3533 18 10.9351C18 6.51678 14.4183 2.93506 10 2.93506C5.58172 2.93506 2 6.51678 2 10.9351C2 15.3533 5.58172 18.9351 10 18.9351ZM13.7071 9.64217C14.0976 9.25164 14.0976 8.61848 13.7071 8.22795C13.3166 7.83743 12.6834 7.83743 12.2929 8.22795L9 11.5208L7.70711 10.228C7.31658 9.83743 6.68342 9.83743 6.29289 10.228C5.90237 10.6185 5.90237 11.2516 6.29289 11.6422L8.29289 13.6422C8.68342 14.0327 9.31658 14.0327 9.70711 13.6422L13.7071 9.64217Z" fill="#FAB706"></path>
           </svg>
-          Уровень сложности: для новичков
-        </div>
-        <div class="include-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.9351C14.4183 18.9351 18 15.3533 18 10.9351C18 6.51678 14.4183 2.93506 10 2.93506C5.58172 2.93506 2 6.51678 2 10.9351C2 15.3533 5.58172 18.9351 10 18.9351ZM13.7071 9.64217C14.0976 9.25164 14.0976 8.61848 13.7071 8.22795C13.3166 7.83743 12.6834 7.83743 12.2929 8.22795L9 11.5208L7.70711 10.228C7.31658 9.83743 6.68342 9.83743 6.29289 10.228C5.90237 10.6185 5.90237 11.2516 6.29289 11.6422L8.29289 13.6422C8.68342 14.0327 9.31658 14.0327 9.70711 13.6422L13.7071 9.64217Z" fill="#FAB706"></path>
-          </svg>
           Тех. поддержка: чат в мессенджере
-        </div>
-        <div class="include-item">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18.9351C14.4183 18.9351 18 15.3533 18 10.9351C18 6.51678 14.4183 2.93506 10 2.93506C5.58172 2.93506 2 6.51678 2 10.9351C2 15.3533 5.58172 18.9351 10 18.9351ZM13.7071 9.64217C14.0976 9.25164 14.0976 8.61848 13.7071 8.22795C13.3166 7.83743 12.6834 7.83743 12.2929 8.22795L9 11.5208L7.70711 10.228C7.31658 9.83743 6.68342 9.83743 6.29289 10.228C5.90237 10.6185 5.90237 11.2516 6.29289 11.6422L8.29289 13.6422C8.68342 14.0327 9.31658 14.0327 9.70711 13.6422L13.7071 9.64217Z" fill="#FAB706"></path>
-          </svg>
-          Бонусы: только для дорогих тарифов
         </div>
         <div class="include-item">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
@@ -1054,7 +1000,7 @@
         <div class="include-discount-old-price">3500 ₽</div>
         <div class="include-discount-count">-30%</div>
       </div>
-      <div class="button button-yellow">Узнать больше</div>
+      <div class="button button-yellow">Купить курс</div>
     </div>
   </div>
 </div>
@@ -1284,7 +1230,7 @@
           </div>
         </div>
         <div class="menu__links">
-          <a href="#" class="menu__link">
+          <a href="#" class="menu__link menu__link-border">
             <div class="menu__icon">
               <img src="/assets/img/home.svg" alt="">
             </div>
@@ -1367,7 +1313,7 @@
         <div class="footer__title">
           Главная
         </div>
-        <a href="" class="footer__link">Узнайте свои сильные стороны, пройти тест</a>
+        <a href="" class="footer__link">Пройти тест. Узнайте свои сильные стороны</a>
         <a href="" class="footer__link">Каталог курсов</a>
         <a href="" class="footer__link">Скидки</a>
         <a href="" class="footer__link">Бесплатно</a>
@@ -1388,12 +1334,12 @@
           <img src="/assets/img/footer-logo.svg" alt="">
         </a> 
         <div class="footer__buttons">
-          <div class="button">
+          <a href="/contact" class="button">
             Связаться с нами
-          </div>
-          <div class="button-white">
+          </a>
+          <a href="/director" class="button-white">
             Связаться с директором
-          </div>
+          </a>
         </div>
       </div>
     </div>
