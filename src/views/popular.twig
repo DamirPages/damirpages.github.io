@@ -9,9 +9,11 @@
     <div class="popular-tabs">
       {% block tabs %}
         {% include '../src/templates/partials/landing/tabs.twig' with {'tabs': [
-          {'name': 'Популярные', 'active': true, 'link': '#'},
+          {'name': 'Рекомендуемые', 'active': true, 'link': '#'},
+          {'name': 'Хиты', 'active': false, 'link': '#'},
+          {'name': 'Популярные', 'active': false, 'link': '#'},
+          {'name': 'Скидки', 'active': false, 'link': '#'},
           {'name': 'Бесплатные', 'active': false, 'link': '#'},
-          {'name': 'Новые', 'active': false, 'link': '#'},
         ]} %}
       {% endblock %}
     </div>

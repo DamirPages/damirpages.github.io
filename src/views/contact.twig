@@ -1,0 +1,19 @@
+{% extends "templates/layouts/test.twig" %}
+
+{% set title = "Связаться с нами" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+  <div class="wrapper">
+    <form action="" class="form">
+      <div class="title">
+        Связаться с нами
+      </div>
+      <input type="text" name="email" class="input" autocomplete="off" placeholder="E-mail" required>
+      <textarea name="text" class="textarea" placeholder="Текст сообщения"></textarea>
+      <button type="submit" class="button">
+        Отправить
+      </button>
+    </form>
+  </div>
+{% endblock %}

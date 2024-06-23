@@ -17,14 +17,14 @@
 				{% endblock %}
         {% block tabs %}
 					{% include '../src/templates/partials/landing/tabs.twig' with {'tabs': [
-						{'name': 'О курсе', 'active': true, 'link': '#'},
-						{'name': 'Подробнее', 'active': false, 'link': '#'},
-						{'name': 'Об авторе', 'active': false, 'link': '#'},
-						{'name': 'Преимущества', 'active': false, 'link': '#'},
+						{'name': 'О курсе', 'active': false, 'link': '#course'},
+						{'name': 'Подробнее', 'active': false, 'link': '#more'},
+						{'name': 'Об авторе', 'active': false, 'link': '#author'},
+						{'name': 'Преимущества', 'active': false, 'link': '#adv'},
 					]} %}
 				{% endblock %}
       </div>
-      <div class="landing-header-button">
+      <div class="landing-header-button show-in-scroll">
         <div class="button">
           Купить курс
         </div>
