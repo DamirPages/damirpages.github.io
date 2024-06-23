@@ -100,3 +100,35 @@ modalElements.forEach(modal => {
 		}
 	});
 });
+
+const options = {
+	root: null,
+	rootMargin: '170px',
+	threshold: 1,
+};
+
+const check = entries =>
+	entries.forEach(entry => {
+		const id = entry.target.getAttribute('id');
+		if (entry.isIntersecting) {
+			document.querySelectorAll('.landing-header-container .new-tab').forEach(el => el.classList.remove('active'));
+			document.querySelector('.landing-header-container a[href="#' + id + '"]').classList.add('active');
+		}
+	});
+
+const Obs = new IntersectionObserver(check, options);
+document.querySelectorAll('.anchor-link').forEach(el => Obs.observe(el));
+
+const elScrollable = document.querySelector('html');
+
+const handleNav = () => {
+	const viewportHeight = window.innerHeight;
+	const { scrollTop } = elScrollable;
+	if (scrollTop > viewportHeight) {
+		document.querySelectorAll('.show-in-scroll').forEach(el => el.classList.add('active'));
+	} else {
+		document.querySelectorAll('.show-in-scroll').forEach(el => el.classList.remove('active'));
+	}
+};
+
+addEventListener('scroll', handleNav);
