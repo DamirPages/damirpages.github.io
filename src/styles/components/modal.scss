@@ -137,6 +137,9 @@
       stroke: #000;
     }
   }
+  &__link-border{
+    border-bottom: 1px solid #e1e1e1;
+  }
   &__link, &__dropdown-button{
     display: flex;
     align-items: center;

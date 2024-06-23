@@ -9,6 +9,7 @@ body {
 
 html {
 	height: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -117,6 +118,7 @@ h6 {
   transition: 0.3s;
   cursor: pointer;
   text-align: center;
+  color: #000;
 
   &:hover{
     background: #fff5da;
@@ -173,7 +175,7 @@ h6 {
   }
 }
 
-.input{
+.input, textarea{
   padding: 12px 16px;
   width: 100%;
   background: #F9FAFB;
@@ -194,6 +196,10 @@ h6 {
     color: #6B7280;
     transition: 0.3s;
   }
+}
+.textarea{
+  resize: none;
+  height: 100px;
 }
 
 
@@ -534,6 +540,9 @@ $arrow_color: $gray !default;
   height: 41px;
   display: flex;
   align-items: center;
+  .nice-select-dropdown{
+    min-width: 170px;
+  }
 }
 
 .page-controls {
@@ -742,5 +751,37 @@ $arrow_color: $gray !default;
     left: calc(50% - 25.5px);
     top: calc(50% - 25.5px);
     background-repeat: no-repeat;
+  }
+}
+
+.anchor-link{
+  scroll-margin-top: 170px;
+}
+
+.show-in-scroll{
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: 0.3s;
+  &.active{
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+  }
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+  .title{
+    font-size: 38px;
+    font-weight: 900;
+    margin-bottom: 20px;
+  }
+  .input, .textarea{
+    width: 500px;
+    background: #fff;
+    margin-bottom: 20px;
   }
 }

@@ -6,6 +6,18 @@
 	overflow: hidden;
 	margin-bottom: 20px;
 	padding: 44px 210px 44px 60px;
+	.include-aside{
+		position: absolute;
+		right: 40px;
+		top: 120px;
+		padding: 0;
+		background: transparent;
+		width: 260px;
+		color: #fff;
+	}
+	.include-discount-old-price, .include-aside-table tr th, .include-aside-table tr td{
+		color: #fff;
+	} 
 }
 
 .banner-img {
@@ -104,5 +116,9 @@
 .banner-guard {
 	position: absolute;
 	right: 20px;
-	bottom: 20px;
+	top: 20px;
+	width: 120px;
+	img{
+		max-width: 100%;
+	}
 }

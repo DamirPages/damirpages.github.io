@@ -6,12 +6,16 @@
   box-shadow: 0 6px 11px rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   display: flex;
+  background: #fff;
 }
 
 .include-container {
   width: calc(100% - 333px);
   background: #fff;
   padding: 48px;
+  &:only-child{
+    width: 100%;
+  }
 }
 
 .include-aside {
@@ -83,12 +87,15 @@
 
 .include-variants {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .include-variant {
   display: flex;
   align-items: center;
   margin-right: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .include-variant-icon {

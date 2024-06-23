@@ -41,6 +41,8 @@
   &__buttons{
     margin-top: 54px;
     max-width: 232px;
+    display: flex;
+    flex-direction: column;
     & > *:not(:last-child){
       margin-bottom: 12px;
     }
