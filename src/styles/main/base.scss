@@ -785,3 +785,24 @@ $arrow_color: $gray !default;
     margin-bottom: 20px;
   }
 }
+
+.new-design{
+  .button, .button-white{
+    font-weight: normal;
+  }
+  .button, .author-item-tag, .program__element-list li::before, .info__icon, {
+    background: #ffdd2d;
+  }
+  .include-discount-count, .footer__title, .author-reward-title, .include-variant-title-big, .banner-title {
+    color: #ffdd2d;
+  }
+  .include-item svg path, .author-card-rait-icon svg path, .banner-rait-icon svg path, .desc-list-item-icon svg path, .reviews__rating svg path{
+    fill: #ffdd2d !important;
+  }
+  .author-item-icon svg path{
+    stroke: #ffdd2d;
+  }
+  .new-tab.active{
+    border-color: #ffdd2d;
+  }
+}

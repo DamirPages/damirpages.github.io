@@ -143,7 +143,7 @@
 
 .profile__dropdown{
   position: absolute;
-  top: 100%;
+  top: calc(100% + 5px);
   left: 0;
   width: 100%;
   background: #fff;
@@ -156,6 +156,15 @@
   pointer-events: none;
   visibility: hidden;
   transition: 0.3s;
+  border-radius: 5px;
+  &::before{
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 100%;
+    height: 6px;
+    content: '';
+  }
   a{
     color: #000;
     transition: 0.3s;

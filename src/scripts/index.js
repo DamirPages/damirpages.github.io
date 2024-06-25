@@ -10,6 +10,10 @@ import '@fancyapps/ui/dist/fancybox/fancybox.css';
 
 Fancybox.bind('[data-fancybox]');
 
+const validateEmail = email => {
+	return email.match(/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/);
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 	const selects = document.querySelectorAll('.selectize');
 	selects.forEach(select => {
@@ -132,3 +136,45 @@ const handleNav = () => {
 };
 
 addEventListener('scroll', handleNav);
+
+const forms = document.querySelectorAll('[data-validation="form"]');
+forms.forEach(form => {
+	const textInputs = form.querySelectorAll('[data-validation="text"]');
+	const emailsInputs = form.querySelectorAll('[data-validation="email"]');
+	const button = form.querySelector('.button');
+	const counts = textInputs.length + emailsInputs.length;
+
+	function checkForm() {
+		let validationPassed = 0;
+		textInputs.forEach(input => {
+			if (input.value.length > 5) {
+				validationPassed++;
+			}
+		});
+		emailsInputs.forEach(input => {
+			if (validateEmail(input.value)) {
+				validationPassed++;
+			}
+		});
+		if(counts === validationPassed) {
+			return true;
+		}else{
+			return false;
+		}
+	}
+	[...textInputs, ...emailsInputs].forEach(input => {
+		input.addEventListener('input', () => {
+			if(checkForm()){
+				button.classList.remove('disabled');
+			}else{
+				button.classList.add('disabled');
+			}
+		});
+	});
+});
+
+let params = new URLSearchParams(document.location.search);
+let newdesign = params.get('newdesign');
+if(newdesign){
+	document.body.classList.add('new-design');
+}
