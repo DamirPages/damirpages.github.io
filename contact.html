@@ -104,22 +104,21 @@
 
 	
   <div class="wrapper">
-    <form action="" class="form">
+    <form action="" class="form" data-validation="form">
       <div class="title">
         Связаться с нами
       </div>
-      <input type="text" name="email" class="input" autocomplete="off" placeholder="E-mail" required>
-      <textarea name="text" class="textarea" placeholder="Текст сообщения"></textarea>
-      <button type="submit" class="button">
+      <input type="text" name="email" class="input" autocomplete="off" placeholder="E-mail" data-validation="email" required>
+      <textarea name="text" class="textarea" placeholder="Текст сообщения" data-validation="text"></textarea>
+      <button type="submit" class="button disabled">
         Отправить
       </button>
     </form>
   </div>
 
 
-
-
-	<div class="modal">
+	
+		<div class="modal">
     <!-- .active -->
     <div class="modal__auth">
         <div class="title">
@@ -145,7 +144,7 @@
         </form>
     </div>
 </div>
-	<div class="modal">
+		<div class="modal">
     <!-- .active -->
     <div class="modal__reg">
         <div class="title">
@@ -193,7 +192,7 @@
     });
   });
 </script>
-	<div class="modal">
+		<div class="modal">
     <!-- .active -->
     <div class="modal__thanks">
         <div class="title">
@@ -204,7 +203,7 @@
         </div>
     </div>
 </div>
-	<div class="modal">
+		<div class="modal">
     <!-- .active -->
     <div class="menu">
       <div class="menu__wrapper">
@@ -292,7 +291,70 @@
       </div>
     </div>
 </div>
+	
 
+	
+		<footer class="footer">
+  <div class="wrapper">
+    <div class="footer__container">
+      <div class="footer__links">
+        <div class="footer__title">
+          Главная
+        </div>
+        <a href="" class="footer__link">Пройти тест. Узнайте свои сильные стороны</a>
+        <a href="" class="footer__link">Каталог курсов</a>
+        <a href="" class="footer__link">Скидки</a>
+        <a href="" class="footer__link">Бесплатно</a>
+      </div>
+      <div class="footer__socials">
+        <a href="#" class="footer__social">
+          <img src="/assets/img/vk.svg" alt="">
+        </a>
+        <a href="#" class="footer__social">
+          <img src="/assets/img/yandex.svg" alt="">
+        </a>
+        <a href="#" class="footer__social">
+          <img src="/assets/img/telegram.svg" alt="">
+        </a>
+      </div>
+      <div class="footer__column">
+        <a href="" class="logo">
+          <img src="/assets/img/footer-logo.svg" alt="">
+        </a> 
+        <div class="footer__buttons">
+          <a href="/contact" class="button">
+            Связаться с нами
+          </a>
+          <a href="/director" class="button-white">
+            Связаться с директором
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="copyright">
+      <div class="copyright__text">
+        © 2024 High Level Skills. Все права защищены.
+      </div>
+      <div class="copyright__info">
+        <p>
+          ООО «Информационные технологические системы»
+        </p>
+        <p>
+          ОГРН 1197746586971
+        </p>
+        <p>
+          107045 Россия, Москва, ул. Сретенка, 12
+        </p>
+      </div>
+      <div class="copyright__links">
+        <a href="">Политика конфиденциальности</a>
+        <a href="">О персональных данных</a>
+        <a href="">Договор оферты</a>
+      </div>
+    </div>
+  </div>
+</footer>
+	
 
 
 
