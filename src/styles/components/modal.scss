@@ -27,6 +27,12 @@
   &__reg:not(.menu){
     max-width: 663px;
   }
+  &__politic:not(.menu){
+    max-width: 700px;
+    max-height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+  }
   &__thanks:not(.menu){
     max-width: 478px;
   }
@@ -57,6 +63,28 @@
 
   .checkbox:not(:last-child){
     margin-bottom: 15px;
+  }
+
+  .content{
+    font-size: 14px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+    h1, h2, h3, h4, h5, h6, p{
+      margin-bottom: 15px;
+    }
+    &::-webkit-scrollbar {
+      width: 12px;               
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: #fff;       
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #FAB706;    
+      border-radius: 20px;       
+      border: 3px solid #fff;  
+    }
   }
 
   .text{

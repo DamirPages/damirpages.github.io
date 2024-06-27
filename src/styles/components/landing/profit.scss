@@ -16,13 +16,13 @@
 .profit-list {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
 }
 
 .profit-item {
-  margin-right: 20px;
-  margin-bottom: 20px;
   display: flex;
   align-items: center;
+  width: calc(33.3333% - 14px);
 }
 
 .profit-item-icon {
@@ -31,6 +31,6 @@
 }
 
 .profit-item-text {
-  width: 170px;
+  width: 240px;
   font-size: 16px;
 }

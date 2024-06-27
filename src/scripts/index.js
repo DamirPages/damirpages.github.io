@@ -172,9 +172,3 @@ forms.forEach(form => {
 		});
 	});
 });
-
-let params = new URLSearchParams(document.location.search);
-let newdesign = params.get('newdesign');
-if(newdesign){
-	document.body.classList.add('new-design');
-}

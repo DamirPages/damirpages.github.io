@@ -76,7 +76,10 @@
   &__links{
     display: flex;
     flex-direction: column;
-    a{
+    a, button{
+      background: transparent;
+      border: none;
+      padding: 0;
       align-self: baseline;
       color: #fff;
       font-size: 13px;
