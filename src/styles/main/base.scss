@@ -790,3 +790,35 @@ $arrow_color: $gray !default;
     margin-bottom: 20px;
   }
 }
+.authors{
+  display: flex;
+  &__imgs{
+    display: flex;
+    & > *:not(:last-child){
+      margin-right: -25px;
+    }
+    *{
+      cursor: pointer;
+    }
+    .active{
+      z-index: 2;
+    }
+  }
+  &__names{
+    display: flex;
+    align-items: center;
+    & > *{
+      display: none;
+    }
+    .active{
+      display: block;
+    }
+  }
+}
+.new-catalog-author{
+  .authors__imgs{
+    & > *:not(:last-child){
+      margin-right: -10px;
+    }
+  }
+}

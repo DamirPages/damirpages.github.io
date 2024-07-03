@@ -8,10 +8,14 @@
 
 .author-card {
   width: 274px;
+  display: flex;
+  flex-direction: column-reverse;
   border-radius: 8px;
   overflow: hidden;
   background: #f9f9f9;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1;
 }
 
 .author-card-img img {
@@ -22,13 +26,16 @@
 
 .author-card-img {
   width: 100%;
-  height: 180px;
+  height: 100%;
   border-radius: 8px;
   overflow: hidden;
+  position: absolute;
+  z-index: -1;
 }
 
 .author-card-body {
   padding: 24px 16px;
+  color: #fff;
 }
 
 .author-card-name {
@@ -47,19 +54,19 @@
 }
 
 .author-card-rait-num {
-  color: #6B7280;
+  color: #fff;
   font-weight: 900;
   font-size: 12px;
 }
 
 .author-card-rait-count {
-  color: #6B7280;
+  color: #fff;
   font-size: 12px;
 }
 
 .author-card-text {
-  color: #6B7280;
-  font-size: 16px;
+  color: #fff;
+  font-size: 14px;
   line-height: 150%;
 }
 
