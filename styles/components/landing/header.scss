@@ -1,0 +1,19 @@
+.landing-header {
+  box-shadow: 0 5px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  position: sticky;
+  left: 0;
+  top: 74px;
+  z-index: 4;
+  background: #f9f9f9;
+  .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-button{
+    width: 240px;
+    flex-shrink: 0;
+    margin-left: 30px;
+  }
+}

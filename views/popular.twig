@@ -1,0 +1,107 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Популярные курсы" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+
+	<div class="wrapper">
+    <div class="popular-tabs">
+      {% block tabs %}
+        {% include '../src/templates/partials/landing/tabs.twig' with {'tabs': [
+          {'name': 'Рекомендуемые', 'active': true, 'link': '#'},
+          {'name': 'Хиты', 'active': false, 'link': '#'},
+          {'name': 'Популярные', 'active': false, 'link': '#'},
+          {'name': 'Скидки', 'active': false, 'link': '#'},
+          {'name': 'Бесплатные', 'active': false, 'link': '#'},
+        ]} %}
+      {% endblock %}
+    </div>
+	</div>
+  
+  <div class="wrapper">
+    <div class="new-slider new-slider-default slider-container-popular">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            {% include '../src/templates/partials/card.twig' %}
+          </div>
+          <div class="swiper-slide">
+            {% include '../src/templates/partials/card.twig' %}
+          </div>
+          <div class="swiper-slide">
+            {% include '../src/templates/partials/card.twig' %}
+          </div>
+          <div class="swiper-slide">
+            {% include '../src/templates/partials/card.twig' %}
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-prev">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="50"
+          viewBox="0 0 50 50"
+          fill="none"
+        >
+          <rect
+            x="50"
+            y="50"
+            width="50"
+            height="50"
+            rx="25"
+            transform="rotate(-180 50 50)"
+            fill="#1F2A37"
+          />
+          <path
+            d="M28.125 32.292L20.8333 25.0003L28.125 17.7087"
+            stroke="white"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+      <div class="swiper-button-next">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="50"
+          height="51"
+          viewBox="0 0 50 51"
+          fill="none"
+        >
+          <rect y="0.5" width="50" height="50" rx="25" fill="#1F2A37" />
+          <path
+            d="M21.875 18.208L29.1667 25.4997L21.875 32.7913"
+            stroke="white"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
+    </div>
+    <div class="page-links">
+      <a href="/catalog" class="page-link">
+        Перейти в каталог
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M17.25 8.25L21 12M21 12L17.25 15.75M21 12H3"
+            stroke="#212A34"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

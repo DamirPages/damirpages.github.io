@@ -1,0 +1,19 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Список ссылок на страницы" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+	<div class="allpage">
+		<div class="wrapper">
+			<div class="title">Всего страниц: {{ listHtml()|length }}</div>
+			<div class="allpage-links">
+				{% for html in listHtml() %}
+					<a class="allpage-link" href="/{{ html.file }}" target="_blank">
+						<div>{{ html.title }}</div>
+					</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endblock %}

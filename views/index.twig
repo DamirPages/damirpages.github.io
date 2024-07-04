@@ -1,0 +1,72 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Лендинг о курсе" %}
+{% set isAuthorized = false %}
+
+{% block content %}
+
+  <div class="landing-header">
+    <div class="wrapper">
+      <div class="landing-header-container">
+        {% block breadcrumbs %}
+					{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+						{'link': '/catalog', 'text': 'Каталог курсов', 'active': false},
+						{'link': '#', 'text': 'Здоровье', 'active': false},
+						{'link': '#', 'text': 'Курс «Оздоровительная гимнастика»', 'active': true},
+					]} %}
+				{% endblock %}
+        {% block tabs %}
+					{% include '../src/templates/partials/landing/tabs.twig' with {'tabs': [
+						{'name': 'О курсе', 'active': false, 'link': '#course'},
+						{'name': 'Подробнее', 'active': false, 'link': '#more'},
+						{'name': 'Об авторе', 'active': false, 'link': '#author'},
+						{'name': 'Преимущества', 'active': false, 'link': '#adv'},
+						{'name': 'Отзывы', 'active': false, 'link': '#reviews'},
+					]} %}
+				{% endblock %}
+      </div>
+      <div class="landing-header-button show-in-scroll">
+        <div class="button">
+          Купить курс
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% block banner %}
+		{% include '../src/templates/partials/landing/banner.twig' %}
+	{% endblock %}
+
+	{% block includes %}
+		{% include '../src/templates/partials/landing/include2.twig' %}
+	{% endblock %}
+
+	{% block slider %}
+		{% include '../src/templates/partials/landing/slider.twig' %}
+	{% endblock %}
+
+	{% block profit %}
+		{% include '../src/templates/partials/landing/profit.twig' %}
+	{% endblock %}
+
+	{% block desc %}
+		{% include '../src/templates/partials/landing/desc.twig' %}
+	{% endblock %}
+
+	{% block program %}
+		{% include '../src/templates/partials/landing/program.twig' %}
+	{% endblock %}
+
+	{% block info %}
+		{% include '../src/templates/partials/landing/info.twig' %}
+	{% endblock %}
+
+	{% block includes %}
+		{% include '../src/templates/partials/landing/include.twig' %}
+	{% endblock %}
+
+	{% block reviews %}
+		{% include '../src/templates/partials/landing/reviews.twig' %}
+	{% endblock %}
+
+{% endblock %}

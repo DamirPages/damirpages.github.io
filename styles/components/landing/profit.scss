@@ -1,0 +1,36 @@
+
+.profit {
+  padding: 48px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 6px 11px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.profit-title {
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.profit-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profit-item {
+  display: flex;
+  align-items: center;
+  width: calc(33.3333% - 14px);
+}
+
+.profit-item-icon {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.profit-item-text {
+  width: 240px;
+  font-size: 16px;
+}

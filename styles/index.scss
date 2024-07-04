@@ -1,0 +1,26 @@
+@import "./main/fonts";
+@import "./main/variables";
+@import "./helpers/bootstrap";
+@import "./helpers/focus-visible";
+@import "./helpers/functions";
+@import "./helpers/font";
+@import "./main/base";
+
+@import "./components/header";
+@import "./components/footer";
+@import "./components/landing/banner";
+@import "./components/landing/include";
+@import "./components/landing/slider";
+@import "./components/landing/profit";
+@import "./components/landing/desc";
+@import "./components/landing/program";
+@import "./components/landing/info";
+@import "./components/landing/reviews";
+@import "./components/breadcrumbs";
+@import "./components/tabs";
+@import "./components/card";
+@import "./components/catalog";
+@import "./components/test";
+@import "./components/modal";
+@import "./components/404";
+@import "./components/landing/header";

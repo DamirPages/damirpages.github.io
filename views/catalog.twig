@@ -1,0 +1,174 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Каталог" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+
+	<div class="wrapper">
+		{% block breadcrumbs %}
+			{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+        {'link': '/catalog', 'text': 'Каталог курсов', 'active': true},
+      ]} %}
+		{% endblock %}
+	</div>
+
+	<div class="new-catalog">
+		<div class="wrapper">
+			<div class="title">
+				Каталог Онлайн-курсов, тренинги и видеокурсов
+			</div>
+			<div class="new-catalog-controls">
+				<div class="category-select-container">
+					<div class="category-select-title">Категория курсов</div>
+					<div class="category-select">
+						<select name="" id="" class="selectize category-course">
+							<option value="" selected>Все</option>
+							<option value="">Все2</option>
+							<option value="">Все3</option>
+						</select>
+					</div>
+				</div>
+				<div class="category-filter-button">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="20"
+						height="21"
+						viewBox="0 0 20 21"
+						fill="none"
+					>
+						<path
+							d="M17 3.25C17 2.83579 16.6642 2.5 16.25 2.5C15.8358 2.5 15.5 2.83579 15.5 3.25V8.75C15.5 9.16421 15.8358 9.5 16.25 9.5C16.6642 9.5 17 9.16421 17 8.75V3.25Z"
+						/>
+						<path
+							d="M17 16.25C17 15.8358 16.6642 15.5 16.25 15.5C15.8358 15.5 15.5 15.8358 15.5 16.25V17.75C15.5 18.1642 15.8358 18.5 16.25 18.5C16.6642 18.5 17 18.1642 17 17.75V16.25Z"
+						/>
+						<path
+							d="M3.75 15.5C4.16421 15.5 4.5 15.8358 4.5 16.25V17.75C4.5 18.1642 4.16421 18.5 3.75 18.5C3.33579 18.5 3 18.1642 3 17.75V16.25C3 15.8358 3.33579 15.5 3.75 15.5Z"
+						/>
+						<path
+							d="M4.5 3.25C4.5 2.83579 4.16421 2.5 3.75 2.5C3.33579 2.5 3 2.83579 3 3.25V8.75C3 9.16421 3.33579 9.5 3.75 9.5C4.16421 9.5 4.5 9.16421 4.5 8.75V3.25Z"
+						/>
+						<path
+							d="M10 11.5C10.4142 11.5 10.75 11.8358 10.75 12.25V17.75C10.75 18.1642 10.4142 18.5 10 18.5C9.58579 18.5 9.25 18.1642 9.25 17.75V12.25C9.25 11.8358 9.58579 11.5 10 11.5Z"
+						/>
+						<path
+							d="M10.75 3.25C10.75 2.83579 10.4142 2.5 10 2.5C9.58579 2.5 9.25 2.83579 9.25 3.25V4.75C9.25 5.16421 9.58579 5.5 10 5.5C10.4142 5.5 10.75 5.16421 10.75 4.75V3.25Z"
+						/>
+						<path
+							d="M10 6.5C8.89543 6.5 8 7.39543 8 8.5C8 9.60457 8.89543 10.5 10 10.5C11.1046 10.5 12 9.60457 12 8.5C12 7.39543 11.1046 6.5 10 6.5Z"
+						/>
+						<path
+							d="M3.75 10.5C2.64543 10.5 1.75 11.3954 1.75 12.5C1.75 13.6046 2.64543 14.5 3.75 14.5C4.85457 14.5 5.75 13.6046 5.75 12.5C5.75 11.3954 4.85457 10.5 3.75 10.5Z"
+						/>
+						<path
+							d="M16.25 10.5C15.1454 10.5 14.25 11.3954 14.25 12.5C14.25 13.6046 15.1454 14.5 16.25 14.5C17.3546 14.5 18.25 13.6046 18.25 12.5C18.25 11.3954 17.3546 10.5 16.25 10.5Z"
+						/>
+					</svg>
+					Все фильтры
+				</div>
+				<div class="category-result-text">Найдено 530 курсов</div>
+				<div class="sort-select">
+					<select name="" id="" class="selectize">
+						<option value="" selected>Рекомендуемые</option>
+						<option value="">Хиты</option>
+						<option value="">Популярные</option>
+						<option value="">Скидки</option>
+						<option value="">Бесплатные</option>
+					</select>
+				</div>
+			</div>
+			<div class="new-catalog-container">
+				{% block cards %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+					{% include '../src/templates/partials/card.twig' %}
+				{% endblock %}
+			</div>
+			<div class="page-controls">
+				<div class="page-pagination">
+					<a href="" class="page-pagination-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+						>
+							<path
+								d="M11.7267 12L12.6667 11.06L9.61332 8L12.6667 4.94L11.7267 4L7.72666 8L11.7267 12Z"
+							/>
+							<path
+								d="M7.33332 12L8.27332 11.06L5.21998 8L8.27331 4.94L7.33331 4L3.33332 8L7.33332 12Z"
+							/>
+						</svg>
+					</a>
+					<a href="" class="page-pagination-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+						>
+							<path
+								d="M10.06 12L11 11.06L7.94667 8L11 4.94L10.06 4L6.06 8L10.06 12Z"
+							/>
+						</svg>
+					</a>
+					<a href="" class="page-pagination-item active">1</a>
+					<a href="" class="page-pagination-item">2</a>
+					<a href="" class="page-pagination-item">3</a>
+					<a href="" class="page-pagination-item">...</a>
+					<a href="" class="page-pagination-item">158</a>
+					<a href="" class="page-pagination-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+						>
+							<path
+								d="M6.94 4L6 4.94L9.05333 8L6 11.06L6.94 12L10.94 8L6.94 4Z"
+							/>
+						</svg>
+					</a>
+					<a href="" class="page-pagination-item">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="16"
+							height="16"
+							viewBox="0 0 16 16"
+							fill="none"
+						>
+							<path
+								d="M4.27331 4L3.33331 4.94L6.38665 8L3.33331 11.06L4.27331 12L8.27331 8L4.27331 4Z"
+							/>
+							<path
+								d="M8.66668 4L7.72668 4.94L10.78 8L7.72668 11.06L8.66668 12L12.6667 8L8.66668 4Z"
+							/>
+						</svg>
+					</a>
+				</div>
+				<div class="page-items">
+					Страница
+					<div class="page-items-select">
+						<select name="" id="" class="selectize">
+							<option value="" selected>1</option>
+							<option value="">2</option>
+							<option value="">3</option>
+							<option value="">4</option>
+						</select>
+					</div>
+					из 158
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock %}

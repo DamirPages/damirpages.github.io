@@ -1,0 +1,85 @@
+{% extends "templates/layouts/test.twig" %}
+
+{% set title = "Результат теста. Демонстративная личность" %}
+{% set isAuthorized = true %}
+
+{% block content %}
+
+  <div class="wrapper">
+		{% block breadcrumbs %}
+			{% include '../src/templates/partials/breadcrumbs.twig' with {'links': [
+        {'link': '/test', 'text': 'Тест на тип личности', 'active': false},
+        {'link': '/result1', 'text': 'Результат теста', 'active': true},
+      ]} %}
+		{% endblock %}
+	</div>
+
+  <div class="wrapper result">
+    <div class="result__container">
+      <div class="result__result">
+        <span>Результат теста:</span>
+      </div>
+      <div class="title">
+        Демонстративная личность
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Ваши сильные стороны
+        </div>
+        <ul class="result__strong">
+          <li>Эмпатия</li>
+          <li>Коммуникабельность</li>
+          <li>Креативность</li>
+          <li>Творчество</li>
+          <li>Оригинальность</li>
+        </ul>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Какие направления в работе вам подойдут?
+        </div>
+        <div class="result__tags">
+          <div class="result__tag">
+            Продажи
+          </div>
+          <div class="result__tag">
+            Маркетинг и PR
+          </div>
+          <div class="result__tag">
+            HR
+          </div>
+          <div class="result__tag">
+            Туризм
+          </div>
+          <div class="result__tag">
+            Индустрия красоты и творчества
+          </div>
+          <div class="result__tag">
+            Психология
+          </div>
+          <div class="result__tag">
+            Сервис и услуги
+          </div>
+        </div>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          Но для того чтобы стать успешным в этих направлениях вам  стоит поработать над такими качествами как:
+        </div>
+        <ul class="result__update">
+          <li>Детальность</li>
+          <li>Усидчивость и сфокусированность на результате</li>
+          <li>Работо в команде</li>
+          <li>Стрессоустойчивость</li>
+        </ul>
+      </div>
+      <div class="result__block">
+        <div class="result__title">
+          На основе результата теста, мы подобрали для вас следующие обучающие программы:
+        </div>
+      </div>
+      <a href="/recommended" class="button">Посмотреть</a>
+    </div>
+  </div>
+
+{% endblock %}
