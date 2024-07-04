@@ -129,7 +129,7 @@
 }
 
 .new-catalog-info {
-  padding: 4px 14px;
+  padding: 7px 14px;
   border-radius: 3px;
   border: 1px solid #000;
   display: inline-block;
@@ -178,7 +178,7 @@
 
 .new-catalog-prices{
   width: 100%;
-  margin-bottom: 14px;
+  padding-bottom: 10px;
 
   font-size: 13px;
   line-height: 17px;
@@ -230,8 +230,8 @@
 
 .new-catalog-container {
   padding-bottom: 20px;
-  margin-right: -16px;
-  margin-left: -16px;
+  margin-right: -7px;
+  margin-left: -7px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -353,6 +353,7 @@
   top: 0;
   height: calc(100% - 40px);
   width: 100%;
+  z-index: 5;
   &:hover .new-catalog-tooltip-text{
     opacity: 1;
     pointer-events: auto;
@@ -360,7 +361,9 @@
 }
 .new-catalog-tooltip-text{
   position: absolute;
-  bottom: calc(100% + 4px);
+  top: 5px;
+  left: 5px;
+  right: 5px;
   background: #fff;
   border: 1px solid #FAB706;
   border-radius: 8px;
@@ -369,12 +372,5 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-  &::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 100%;
-    height: 6px;
-    width: 100%;
-  }
+  overflow-y: auto;
 }
