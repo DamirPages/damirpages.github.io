@@ -1,4 +1,4 @@
-{% extends "templates/layouts/test.twig" %}
+{% extends "templates/layouts/base.twig" %}
 
 {% set title = "Тест" %}
 {% set isAuthorized = true %}
@@ -47,17 +47,7 @@
           <label class="answer new-answer">
             <input type="radio" name="test1" value="2">
             <span class="answer__icon"></span>
-            <span class="answer__text">Скорее да</span>
-          </label>
-          <label class="answer new-answer">
-            <input type="radio" name="test1" value="3">
-            <span class="answer__icon"></span>
             <span class="answer__text">Нет</span>
-          </label>
-          <label class="answer new-answer">
-            <input type="radio" name="test1" value="4">
-            <span class="answer__icon"></span>
-            <span class="answer__text">Скорее нет</span>
           </label>
         </div>
         <button type="button" class="button button-yellow test-button disabled">Принять</button>
@@ -78,17 +68,7 @@
           <label class="answer new-answer">
             <input type="radio" name="test2" value="2">
             <span class="answer__icon"></span>
-            <span class="answer__text">Скорее да</span>
-          </label>
-          <label class="answer new-answer">
-            <input type="radio" name="test2" value="3">
-            <span class="answer__icon"></span>
             <span class="answer__text">Нет</span>
-          </label>
-          <label class="answer new-answer">
-            <input type="radio" name="test2" value="4">
-            <span class="answer__icon"></span>
-            <span class="answer__text">Скорее нет</span>
           </label>
         </div>
         <button type="submit" class="button button-yellow test-button disabled">Принять</button>
