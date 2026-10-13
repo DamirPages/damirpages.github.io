@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Битум Плюс</title>
+  <rect width="64" height="64" rx="10" fill="#232821" />
+  <g font-family="Arial, sans-serif" font-weight="700" text-anchor="middle">
+    <text x="32" y="27" font-size="17" textLength="54" lengthAdjust="spacingAndGlyphs" fill="#f8f7f3">БИТУМ</text>
+    <text x="32" y="47" font-size="18" textLength="47" lengthAdjust="spacingAndGlyphs" fill="#e77838">ПЛЮС</text>
+  </g>
+</svg>
