@@ -1,2 +1,3 @@
+# Preserve Astro assets if GitHub Pages still builds this directory with Jekyll.
 include:
   - _astro
