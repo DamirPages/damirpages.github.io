@@ -1,0 +1,27 @@
+Options -Indexes
+DirectoryIndex index.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{THE_REQUEST} \s/+index(?:1)?\.html[\s?] [NC]
+  RewriteRule ^index(?:1)?\.html$ / [R=301,L]
+
+  RewriteRule ^index2\.html/?$ /about/ [R=301,L,NC]
+  RewriteRule ^index3\.html/?$ /contacts/ [R=301,L,NC]
+  RewriteRule ^index5\.html/?$ /careers/ [R=301,L,NC]
+  RewriteRule ^index6\.html/?$ /safety/ [R=301,L,NC]
+  RewriteRule ^(about|contacts|careers|safety)\.html/?$ /$1/ [R=301,L]
+
+  # Redirect only explicit requests for each directory's index document.
+  # Internal DirectoryIndex resolution must not redirect back to itself.
+  RewriteCond %{THE_REQUEST} \s/+(about|contacts|careers|safety)/index\.html[\s?]
+  RewriteRule ^(about|contacts|careers|safety)/index\.html$ /$1/ [R=301,L]
+
+  RewriteRule ^(about|contacts|careers|safety)$ /$1/ [R=301,L]
+</IfModule>
+
+# Test build indexing policy
+<IfModule mod_headers.c>
+  Header always set X-Robots-Tag "noindex, nofollow, noimageindex"
+  Header always set Cache-Control "no-store"
+</IfModule>
